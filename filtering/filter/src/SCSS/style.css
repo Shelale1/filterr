@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#filter {
+  background-color: red;
+}
+#filter .container .parametrs {
+  border: 1px solid black;
+}
+#filter .container .parametrs .value h3 {
+  color: red;
+}/*# sourceMappingURL=style.css.map */
