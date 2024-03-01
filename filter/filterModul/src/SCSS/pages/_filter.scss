@@ -1,0 +1,276 @@
+// #filtering {
+//   .container {
+//     margin: 30px auto;
+//     width: 1400px;
+
+//     #card-list {
+//       border: 1px solid black;
+//       display: flex;
+//       //   gap: 20px;
+//       flex-wrap: wrap;
+
+//       .card {
+//         width: 100%;
+
+//         @media (min-width: 576px) {
+//           width: calc(50% - 20px);
+//         }
+
+//         @media (min-width: 768px) {
+//           width: calc(33.333% - 20px);
+//         }
+
+//         @media (min-width: 992px) {
+//           width: calc(25% - 20px);
+//         }
+
+//         .card-inner {
+//           position: relative;
+//           padding: 20px;
+//           .card-image {
+//             width: 100%;
+
+//             img {
+//               width: 100%;
+//               height: 200%;
+
+//               object-fit: cover;
+//             }
+//           }
+
+//           .heart {
+//             position: absolute;
+//             top: 20px;
+//             right: 20px;
+
+//             i {
+//               color: white;
+//             }
+//           }
+
+//           .card-content {
+//             .content-header {
+//               display: flex;
+//               justify-content: space-between;
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+
+// }
+
+#filter-btn {
+  button {
+    border-radius: 6px;
+    border: 1px solid black;
+    background-color: #ffff;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+}
+#filter {
+  margin: 100px auto;
+  max-width: 700px;
+  display: none;
+  .container {
+    border: 1px solid rgb(21, 51, 49);
+    border-radius: 17px;
+    padding: 24px;
+    .header {
+      h3 {
+        font-weight: 500;
+        font-size: 20px;
+        margin-top: 20px;
+        span {
+          font-size: 20px;
+          cursor: pointer;
+        }
+      }
+    }
+    .parametrs {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .value {
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+        /* .i-range içindeki .range-start inputunun genel stili */
+        .i-range input[type="range"].range-start {
+          -webkit-appearance: none;
+          appearance: none;
+          width: 60%; /* .i-range genişliği kadar */
+          height: 10px;
+          background: #d3d3d3; /* Arkaplan rengi */
+
+          border-radius: 5px; /* Kenar yuvarlaklığı */
+
+          margin-bottom: 10px;
+        }
+
+        .i-range input[type="range"].range-start::-webkit-slider-thumb {
+          appearance: none;
+          width: 22px;
+          height: 22px;
+          background: rgb(21, 51, 49);
+          cursor: pointer;
+          border-radius: 50%;
+          border: 4px solid #fff;
+          box-shadow: #b4cff2bb;
+        }
+
+        .i-range input[type="range"].range-start::-moz-range-thumb {
+          width: 20px;
+          height: 20px;
+          background: rgb(19, 44, 42);
+          cursor: pointer;
+          border-radius: 50%;
+        }
+
+        /* Range inputa fare gelince opaklığını artır */
+        .i-range input[type="range"].range-start:hover {
+          opacity: 1;
+        }
+      }
+      .rating {
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+        }
+        .btns {
+          display: flex;
+          gap: 12px;
+          margin-top: 20px;
+          button {
+            font-weight: 500;
+            color: rgb(13, 41, 39);
+            background-color: #ffff;
+            border-radius: 30px;
+            border: 2px solid rgb(21, 51, 49);
+            padding: 6px 16px;
+            cursor: pointer;
+            &:hover {
+              background-color: rgb(21, 51, 49);
+              color: #ffff;
+              transition: ease-in 0.2s;
+              font-weight: 400;
+            }
+            i {
+              font-size: 10px;
+            }
+          }
+          .star-button.selected {
+            background-color: rgb(21, 51, 49); /* Change background color */
+            color: #fff; /* Change text color */
+          }
+        }
+      }
+      .discount {
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+        }
+        .btns {
+          display: flex;
+          gap: 12px;
+          margin-top: 20px;
+          button {
+            font-weight: 600;
+            color: rgb(13, 41, 39);
+            background-color: #ffff;
+            border-radius: 30px;
+            border: 2px solid rgb(21, 51, 49);
+            padding: 8px 16px;
+            cursor: pointer;
+
+            &:hover {
+              background-color: rgb(21, 51, 49);
+              color: #ffff;
+              transition: ease-in 0.2s;
+              font-weight: 400;
+            }
+          }
+          .percent-button.selected {
+            background-color: rgb(21, 51, 49);
+            color: #fff;
+          }
+        }
+      }
+      .catagory {
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+        }
+        .search {
+          position: relative;
+          width: 300px;
+          margin-top: 17px;
+          .fa-magnifying-glass {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            color: rgb(21, 51, 49);
+            font-size: 20px;
+          }
+
+          input[type="text"] {
+            padding: 11px 15px;
+            border: 2px solid rgb(21, 51, 49);
+            border-radius: 12px;
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #b4cff237;
+            &:focus {
+              outline: none;
+
+              border-color: rgb(21, 51, 49);
+            }
+          }
+        }
+      }
+      .brand {
+        h3 {
+          font-weight: 500;
+          font-size: 18px;
+        }
+        .search {
+          position: relative;
+          width: 300px;
+          margin-top: 17px;
+          .fa-magnifying-glass {
+            position: absolute;
+            top: 50%;
+            left: 16px;
+            transform: translateY(-50%);
+            color: rgb(21, 51, 49);
+            font-size: 20px;
+          }
+
+          input[type="text"] {
+            padding: 11px 15px;
+            border: 2px solid rgb(21, 51, 49);
+            border-radius: 12px;
+            width: 100%;
+            height: 50px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background-color: #b4cff252;
+            &:focus {
+              outline: none;
+              border-color: rgb(21, 51, 49);
+            }
+          }
+        }
+      }
+    }
+  }
+}

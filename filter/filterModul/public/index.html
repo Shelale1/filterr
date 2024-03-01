@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../src/SCSS/style.css" />
+  </head>
+  <body>
+    <main>
+      <!-- <section id="filtering">
+        <div class="container">
+       
+          <div id="card-list"></div>
+        </div>
+      </section> -->
+      <section id="filter-btn">
+        <button id="filter-toggle">
+          <i class="fa-solid fa-arrow-up-short-wide"></i>Filter
+        </button>
+      </section>
+      <section id="filter">
+        <div class="container">
+          <div class="header">
+            <h3>
+              <span><i class="fa-solid fa-xmark"></i></span> Filter
+            </h3>
+          </div>
+          <div class="parametrs">
+            <div class="value">
+              <h3>Qiymət aralığı</h3>
+              <div class="i-range">
+                <input
+                  type="range"
+                  class="range-start"
+                  value="150"
+                  max="2 00"
+                />
+              </div>
+              <!-- <div class="dual-range-1">
+                <input type="range" class="range-start" value="10" max="100" />
+                <input type="range" class="range-end" value="90" max="100" />
+              </div>
+              <script type="module">
+                import DualRangeInput from "https://unpkg.com/dual-range-input@latest/script.js";
+                DualRangeInput(".dual-range-1");
+              </script> -->
+            </div>
+            <div class="rating">
+              <h3>Reytinq</h3>
+              <div class="btns">
+                <button>Hamısı</button>
+                <button class="star-button selected">
+                  <i class="fa-solid fa-star"></i> 5
+                </button>
+                <button class="star-button">
+                  <i class="fa-solid fa-star"></i> 4
+                </button>
+                <button class="star-button">
+                  <i class="fa-solid fa-star"></i> 3
+                </button>
+                <button class="star-button">
+                  <i class="fa-solid fa-star"></i> 2
+                </button>
+                <button class="star-button">
+                  <i class="fa-solid fa-star"></i> 1
+                </button>
+              </div>
+            </div>
+            <div class="discount">
+              <h3>Endirim</h3>
+              <div class="btns">
+                <button class="percent-button">Hamısı</button>
+                <button class="percent-button">20%</button>
+                <button class="percent-button selected">30%</button>
+                <button class="percent-button">35%</button>
+                <button class="percent-button">50%</button>
+                <button class="percent-button">60%</button>
+                <button class="percent-button">70%</button>
+                <button class="percent-button">80%</button>
+              </div>
+            </div>
+            <div class="catagory">
+              <h3>Kategoriya</h3>
+              <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i
+                ><input type="text" name="name" id="name" />
+              </div>
+            </div>
+            <div class="brand">
+              <h3>Brend</h3>
+              <div class="search">
+                <i class="fa-solid fa-magnifying-glass"></i
+                ><input type="text" name="name" id="name" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="../src/JS/app.js"></script>
+    <script
+      src="https://kit.fontawesome.com/487b2f78d0.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
